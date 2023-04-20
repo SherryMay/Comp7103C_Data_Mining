@@ -54,7 +54,9 @@ cufflinks
 ```
 ## Note
 
-In PartA.2, Ada_grid is that the soft classifier of Ada_model is changed to Navie_bayes_grid and tuned the hyper-parameters to get Ada_grid with the best parameters. And the code is shown as follows.
+In PartA.2, All models includes: lr_base, Navie_bayes, Navie_bayes_grid, Ada_model, Ada_grid, xgb_model, xgb_grid, voting_classifier. Then the feature importance of Ada_model is calculated.
+
+Ada_grid is that the soft classifier of Ada_model is changed to Navie_bayes_grid and tuned the hyper-parameters to get Ada_grid with the best parameters. And the code is shown as follows.
 ada_model= AdaBoostClassifier( base_estimator=Navie_bayes_grid, random_state = 10)
 
 The voting_classifier is combined by Navie_bayes_grid(wight=0.1), xgb_model(weight=0.8), ada_model(weight=0.9).
